@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>{% block tittle %}{% endblock %}</title>
+	<meta name="description" content="Free Responsive Html5 Css3 Templates ">
+	<meta name="author" content="#">
+	{% load static %}
+    <!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- CSS
+	================================================== -->
+  	<link rel="stylesheet" href="/statics/css/zerogrid.css">
+	<link rel="stylesheet" href="/statics/css/style.css">
+	
+	<!-- Custom Fonts -->
+    <link href="/statics/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+	
+	<link rel="stylesheet" href="/statics/css/menu.css" >
+	<script src="/statics/js/jquery1111.min.js" type="text/javascript"></script>
+	<script src="/statics/js/script.js"></script>
+	
+	<!-- Owl Carousel Assets -->
+    <link href="/statics/owl-carousel/owl.carousel.css" rel="stylesheet">
+	
+	<!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/Items/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+		<script src="js/css3-mediaqueries.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body>
+	<div class="wrap-body">
+		<div id='cssmenu' class="align-center">
+			<ul>
+			   <li><a href='/'><span>Home</span></a></li>
+			   <li class=' has-sub'><a href='#'><span>Blog</span></a>
+				  <ul >
+					 <li class='has-sub'><a href='#'><span>Tech</span></a>
+						<ul>
+						   <li><a href=/fid1><span>Python</span></a></li>
+						   <li class='last'><a href=/fid2><span>Other</span></a></li>
+						</ul>
+					 </li>
+					 <li class='has-sub'><a href='#'><span>Novel</span></a>
+						<ul>
+						   <li><a href=/fid3><span>龙谶</span></a></li>
+						  
+						</ul>
+					 </li>
+				  </ul>
+			   </li>
+			   <li ><a href='/about'><span>About</span></a></li>
+			   
+			</ul>
+		</div>
+		<header class="">
+			<div class="logo">
+				<hr class="line-1">
+				<a href="#">Ewigkeit-Go</a>
+				<span>Silent Love and Calm Joy</span>
+			</div>
+		</header>
+                {% block art %}
+                {% endblock %}
+                                <footer>
+                         <style type="text/css">
+                           #wechat:hover:{img {display:block}}
+                         </style>
+                         <img src="/statics/images/wechat.jpg" style="display:none">
+			<div class="zerogrid wrap-footer">
+				<div class="row">
+					<div class="bottom-social">
+						<a href="http://weibo.com/u/3312757084"><i class="fa fa-weibo"></i></a>
+						<a href="https://github.com/yuyuyugood"><i class="fa fa-github"></i></a>
+						
+						<a href="https://plus.google.com/113781766368417308859"><i class="fa fa-google-plus"></i></a>
+						<a href="mailto:970787907@qq.com"><i class="fa fa-envelope"></i></a>
+						<a href="http://www.linkedin.com/in/%E5%AE%81-%E4%BA%8E-a55ab8b5/"><i class="fa fa-linkedin"></i></a>
+						<a href="http://wpa.qq.com/msgrd?v=3&uin=970787907&site=qq&menu=yes"><i class="fa fa-qq"></i></a>
+					</div>
+				</div>
+				
+			</div>
+		</footer>
+        </div>
+</body>
+</html>

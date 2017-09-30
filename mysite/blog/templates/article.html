@@ -1,0 +1,56 @@
+   {% extends "single.html" %}      
+             {% block tittle %}{{article.name}}{% endblock %}   
+              {% block art %}
+              <section id="container">
+			<div class="wrap-container">
+				<!-----------------Content-Box-------------------->
+				<article class="single-post zerogrid">
+					<div class="row wrap-post"><!--Start Box-->
+						<div class="entry-header">
+							<span class="time">{{article.date}}</span>
+							<h2 class="entry-title"><a href="#">{{article.name}}</a></h2>
+							<span class="cat-links">{% for tag in flag %}<a href="/fid{{tag.flid}}"> {{tag.name}}</a>{% endfor %}</span>
+						</div>
+						<div class="post-thumbnail-wrap">
+							<img src="/statics/images/1.jpg">
+						</div>
+						<div class="entry-content">
+                                                  {% autoescape off %}
+							{{article.art}}
+                                                  {% endautoescape %}
+						</div>
+					</div>
+				</article>
+                                {% for comment in commentlist %}
+                                <div class="zerogrid">
+					<div class="comments-are">
+						<div id="comment">
+				                         <h3>{{comment.commentname}}</h3>
+                                                         <span class="time">{{comment.date}}</span>
+                                                         <p>{{comment.commenttext}}</p>
+						</div>
+					</div>
+				</div>
+                                {% endfor %}
+                              
+				<div class="zerogrid">
+					<div class="comments-are">
+						<div id="comment">
+							<form name="form1" id="comment_form" method="post" action="reply">
+                                                          {% csrf_token %}
+								<label>
+								<span>Comment:</span>
+								<textarea name="message" id="message" required></textarea>
+								</label>
+								<label>
+								<span>Name:</span>
+								<input type="text"  name="name" id="name" required>
+								</label>
+								<center><input class="sendButton" type="submit" name="Submit" value="Submit"></center>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+         {% endblock %}
